@@ -1,0 +1,13 @@
+reviews:
+  profile: chill
+  auto_approvals:
+    enabled: true
+    allow_author_approval: false
+  pre_merge_checks:
+    override_requested_reviewers_only: true
+    custom_checks:
+      - name: "No division helpers"
+        mode: error
+        instructions: "FAIL this check if the PR adds any Python function named `divide`. Otherwise PASS."
+chat:
+  allow_non_org_members: true
